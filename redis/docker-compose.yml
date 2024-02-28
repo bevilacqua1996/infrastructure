@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - C:/Users/bruno/Desktop/Bruno/RedisVolumes/dаta:/root/redis
+      - C:/Users/bruno/Desktop/Bruno/RedisVolumes/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_PASSWORD=<PASSWD>
+      - REDIS_PORT=6379
+      - REDIS_DATABASES=16
